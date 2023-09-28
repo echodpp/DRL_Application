@@ -1,13 +1,19 @@
 ## 1. Review the tutorial notebooks in SB3:
 https://github.com/Stable-Baselines-Team/rl-colab-notebooks/tre e/sb3
 [Requirements]:
-● GettingStartedColabNotebook ● Saving,loadingColabNotebook ● MultiprocessingColabNotebook ● MonitorTrainingColabNotebook ● AtarigamesColabNotebook
-● PyBullet:NormalizinginputfeaturesColabNotebook ● Pre-trainingusingBehaviorCloningColabNotebook ● RLBaselines3ZooColabNotebook
-● AdvancedSavingandLoadingColabNotebook
-● GettingStartedColabNotebook
-● GymWrappers,savingandloadingmodelsColabNotebook ● MultiprocessingColabNotebook
-● CallbacksandhyperparametertuningColabNotebook
-● CreatingacustomgymenvironmentColabNotebook
+- GettingStartedColabNotebook 
+- Saving,loadingColabNotebook
+- MultiprocessingColabNotebook
+- MonitorTrainingColabNotebook
+- AtarigamesColabNotebook
+- PyBullet:Normalizinginputfeatures
+- ColabNotebook Pre-trainingusingBehaviorCloning
+- ColabNotebook RLBaselines3ZooColabNotebook
+- AdvancedSavingandLoadingColabNotebook
+- GettingStartedColabNotebook
+- GymWrappers,savingandloadingmodelsColabNotebook MultiprocessingColabNotebook
+- CallbacksandhyperparametertuningColabNotebook
+- CreatingacustomgymenvironmentColabNotebook
 
 ## 2. Train an agent to play any game/task in SB3 using A2C with Colab:
 Hint: in this task, you don’t need to modify the source code and just need to use the APIs provided in SB3 to run the Google Colab experiments and to train/test the RL agent.
