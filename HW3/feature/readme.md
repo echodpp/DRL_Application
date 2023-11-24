@@ -27,7 +27,7 @@ The feature matrix is a crucial component in enhancing the DRL recommender syste
 
 - The integration of the feature matrix is expected to enhance the model's ability to discern between items and improve recommendation accuracy.
 - It particularly aids in effectively recommending new items or items with sparse interaction data, thereby mitigating the cold start problem.
+- I compared the two side info `categoryid` and `parentid`,, and compared the results, and finally chose a smaller number of patrentid for training to improve efficiency
 
 ---
 
-This markdown section explains the creation of the feature matrix from `categoryid` and `parentid`, and its integration and impact on the DRL recommender system. Feel free to adjust the content to better fit the specifics of your implementation and dataset.
