@@ -1,8 +1,19 @@
-To create a markdown for your GitHub repository that explains the modifications you've made to the DRL recommender system and the reasoning behind them, it's important to be clear and concise. The markdown should explain each change, its purpose, and reference any theoretical or empirical backing for the change if applicable.
+---
 
-Here's a draft of the markdown content that you can use or modify as needed for your GitHub repository:
+## Theoretical Integration in DRL Recommender System
+
+### Background
+The DRL recommender system is enhanced by integrating methodologies from two significant works in the field:
+
+- **Supervised Advantage Actor-Critic for Recommender Systems**: Introduces Supervised Negative Q-learning (SNQN) and Supervised Advantage Actor-Critic (SA2C), which use negative sampling to address biases in Q-value estimation within RL frameworks for RS. This improves recommendation quality, especially where reward signals are sparse.
+
+- **Temporal-Contextual Recommendation in Real-Time**: Proposes the use of Hierarchical Recurrent Neural Networks (HRNN) for capturing both intra-session and inter-session user dynamics. The HRNN-meta model further incorporates item features and metadata, significantly improving recommendations for "cold-start" items and adapting to real-time user behavior.
+
+### Implementation
+The modified DRL model leverages item features through a dense layer, feeding into the existing state representation used for scoring and decision-making. This aligns with the HRNN-meta structure, which combines user and item features for contextual recommendations. The update in loss computation ensures the model learns effectively from both positive and sampled negative interactions, embodying principles from SNQN and SA2C to normalize advantages and mitigate biases.
 
 ---
+![Screenshot 2023-11-23 at 11 28 36 PM](https://github.com/echodpp/DRL_Application/assets/90811429/d6cf0bb8-0766-4a88-90c0-3e7b4b27b2b1)
 
 ## Modifications to the DRL Recommender System
 
@@ -72,11 +83,7 @@ QN_2 = QNetwork(
 **Purpose:** This ensures that the item feature matrix is appropriately passed to the model during initialization, allowing the model to utilize these features right from the start of the training.
 
 ### References and Theoretical Background
-The modifications are based on principles and findings from [Reference XX], which highlights the importance of integrating item features into recommendation systems to tackle the cold start problem.
-
----
-
-This markdown provides a structured and clear explanation of the changes made to the DRL recommender system. Make sure to replace `[Reference XX]` with the actual reference or paper you are following. This will help others understand the changes and the rationale behind them.
-Certainly! To explain the process of creating the feature matrix using `categoryid` and `parentid`, and how this matrix is utilized in the DRL recommender system, you can add the following sections to your markdown:
+arXiv:2111.03474 [cs.LG]
+Yifei Ma, Balakrishnan (Murali) Narayanaswamy, Haibin Lin, and Hao Ding. 2020. Temporal-Contextual Recommendation in Real-Time. In Proceedings of the 26th ACM SIGKDD International Conference on Knowledge Discovery & Data Mining (KDD '20). Association for Computing Machinery, New York, NY, USA, 2291–2299. https://doi.org/10.1145/3394486.3403278
 
 ---
