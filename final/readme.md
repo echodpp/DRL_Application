@@ -53,7 +53,7 @@ The baseline recommends the globally most viewed movies, irrespective of the ind
 ## Code and Reproducibility
 
 The full code for implementing the movie recommendation system is available at:
-https://github.com/user123/movie_recsys
+https://github.com/xxxxxxxx
 
 It includes:
 
