@@ -1,13 +1,17 @@
+# AIPI531 Final Project <br> Movie Recommendation System Evaluation
 
-# Movie Recommendation System Evaluation
+Team member: First Last, First Last, First Last
+_ _ _
+
+
 
 ## Overview
-This document outlines the methodology and results of evaluating a movie recommendation system powered by GPT-3.5 using prompt engineering. The goal is to assess the effectiveness of the language model in generating movie recommendations compared to a baseline model.
+This document outlines the methodology and results of evaluating a movie recommendation system powered by Large Language Model (LLM) using prompt engineering. The goal is to assess the effectiveness of the language model in generating movie recommendations compared to a baseline model.
 
 ## Prompt Engineering Method
-- **Approach**: The prompt engineering method involves creating structured prompts to guide GPT-3.5 in generating movie recommendations. 
+- **Approach**: The prompt engineering method involves creating structured prompts to guide LLM in generating movie recommendations.
 - **Implementation**: The prompts are designed to provide context (such as a list of previously watched movies and a candidate set of movies) and ask the language model to recommend movies based on this context.
-- **Prompt Design**: Specific prompt structures are used to maximize the relevance and accuracy of the recommendations from GPT-3.5.
+- **Prompt Design**: Specific prompt structures are used to maximize the relevance and accuracy of the recommendations from LLM.
 
 ## Evaluation of LLM for Recommendation
 - **Metric**: The effectiveness of the language model is measured using a 'hit rate', which is the ratio of correct recommendations to total recommendations.
@@ -26,7 +30,7 @@ This document outlines the methodology and results of evaluating a movie recomme
 - **Fair Comparison**: The same metric (hit rate) is used for evaluating both systems to ensure a fair and direct comparison of their performance.
 
 ## Conclusion
-The GPT-3.5 based recommendation system significantly outperforms the baseline 'most popular' model, demonstrating the potential of advanced language models in personalized recommendation systems.
+The LLM-based recommendation system significantly outperforms the baseline 'most popular' model, demonstrating the potential of advanced language models in personalized recommendation systems.
 """
 
 # Writing the README content to a file
