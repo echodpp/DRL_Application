@@ -63,6 +63,16 @@ It includes:
 
 Researchers can readily replicate or build upon this work thanks to the open-source codebase and methodological transparency.
 
+# Writing the README content to a file
+
+```
+readme_file_path = '/mnt/data/Movie_Recommendation_System_README.txt'
+with open(readme_file_path, 'w') as file:
+    file.write(readme_content)
+
+readme_file_path
+```
+
 ## Conclusion
 
 Through rigorous evaluation, this project demonstrates the promising potential of large language models for personalized and accurate movie recommendations. Prompt engineering proves to be an effective approach for extracting useful suggestions from the LLM. 
