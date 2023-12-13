@@ -1,6 +1,4 @@
-# Generating a README file content for the movie recommendation experiment
 
-readme_content = """
 # Movie Recommendation System Evaluation
 
 ## Overview
