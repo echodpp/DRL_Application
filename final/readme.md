@@ -90,7 +90,7 @@ The project underscores the potential of LLMs, particularly GPT-3.5 and GPT-4, i
 
 4.RAG: https://arxiv.org/pdf/2005.11401.pdf
 
-5.Langchain: https://python.langchain.com/docs/getstarted/introduction
+5.Langchain: https://python.langchain.com/docs/get_started/introduction
 
 6.Different ideas for applying LLMs for product recommendations (without fine-tuning):
 * https://arxiv.org/pdf/2303.14524.pdf
