@@ -150,14 +150,13 @@ The implementation of our movie recommendation system is organized across severa
    - Separate notebooks are provided for the **GPT-3.5-based** and **GPT-4-based** recommendation systems.
    - **Data and API Key Requirement**: Make sure to have the `movieslen_100k` dataset correctly placed in the defined directory. Additionally, an OpenAI API key is necessary to connect to the respective LLMs (GPT-3.5 and GPT-4). Insert your API key in the designated section of the notebooks.
 
-3. ** 2-step and 3-step prompt (`gpt3_2step.ipynb` and `gpt3_3step.ipynb`):**
+3. **2-step and 3-step prompt (`gpt3_2step.ipynb` and `gpt3_3step.ipynb`):**
    - Separate notebooks are provided for the **2-step prompt** and **3-step prompt** recommendation systems.
    - **Data and API Key Requirement**: Make sure to have the `movieslen_100k` dataset correctly placed in the defined directory. Additionally, an OpenAI API key is necessary to connect to the respective LLMs (GPT-3.5 and GPT-4). Insert your API key in the designated section of the notebooks.
 
-4. ** prompt engineering tricks(`gpt3_prompt_engineering.ipynb`):**
+4. **Prompt Engineering Tricks(`gpt3_prompt_engineering.ipynb`):**
    - A single notebook is provided for the 2-step prompt  recommendation systems ** with different prompt engineering tricks**.
    - **Data and API Key Requirement**: Make sure to have the `movieslen_100k` dataset correctly placed in the defined directory. Additionally, an OpenAI API key is necessary to connect to the respective LLMs (GPT-3.5 and GPT-4). Insert your API key in the designated section of the notebooks.
-
 
 ### References and Tools
 
