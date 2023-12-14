@@ -4,7 +4,7 @@
 ## Team Members’ Contribution 
 
 ### Echo Chen
-* Most Popular Movie Recommender Baseline Model and User-Based Collaborative Filtering Model
+* Most Popular and User-Based Collaborative Filtering baseline Model
 * Initial Prompt Engineering, try few-shot Prompt Engineering
 
 ### Jiaxin Ying
