@@ -1,7 +1,7 @@
 
 # AIPI531 Final Project: Evaluation of a Movie Recommendation System
 
-## 💡 Team Members’ Contribution 
+### 💡 Team Members’ Contribution 
 
 #### Echo Chen
 * Most Popular and User-Based Collaborative Filtering baseline Model
