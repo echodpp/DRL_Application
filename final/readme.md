@@ -3,55 +3,64 @@
 
 ## Team Members’ Contribution 
 
-### Echo Chen
+#### Echo Chen
 * Most Popular and User-Based Collaborative Filtering baseline Model
 * Initial Prompt Engineering, try few-shot Prompt Engineering
 
-### Jiaxin Ying
-* Whole Prompt Engineering process with GPT-3.5 Model
+#### Jiaxin Ying
+* Whole Prompt Engineering process with GPT-3 Model
 
-### Tianyi Hu
-* Enhanced Prompt Engineering, test GPT-4 Model
+#### Tianyi Hu
+* Evaluate different Prompt Engineering techniques, test GPT-4 Model
 
 ## Overview
 
-This project is a collaborative effort to develop and evaluate a sophisticated movie recommendation system leveraging the predictive capabilities of Large Language Models (LLMs). The primary objective is to assess the effectiveness of LLMs in generating personalized and relevant movie recommendations compared to traditional and baseline recommendation models.
+This project is a collaborative effort to develop and evaluate a sophisticated movie recommendation system leveraging the predictive capabilities of Large Language Models (LLMs). The primary objective is to:
+1. assess the effectiveness of LLM-based approaches in generating personalized and relevant movie recommendations 
+2. compare LLM approaches with traditional and baseline recommendation models.
+3. evaluate the performace of LLMs with different prompt engineering techniques.
 
 ### System Description
 
-The recommendation system consists of:
+The recommendation system project consists of:
 
-- A LLM (GPT-3.5 and GPT-4) fine-tuned on movie recommendation data.
-- An innovative prompt engineering framework designed to effectively query the LLM.
-- A traditional User-Based Collaborative Filtering model, enhanced with weighted recommendations.
 - A basic popularity-based recommender as a baseline for comparison.
-- An evaluation module utilizing hit rate metrics to quantify the recommendation accuracy.
+- A traditional User-Based Collaborative Filtering model, enhanced with weighted recommendations.
+- LLM-based (GPT-3 and GPT-4) approaches for movie recommendation.
+- Different prompt engineering frameworks designed to effectively query the LLM.
+- An evaluation module utilizing hit rate metrics to quantify the recommendation accuracies for above methods.
 
 The system operates by analyzing a user's movie-watching history, using prompt engineering to formulate contextual recommendation queries for the LLM, and then generating movie suggestions.
 
 ### Methodology 
 
 
-In our project, we employed a novel approach to prompt engineering with GPT-3.5 and GPT-4, focusing on a structured, multi-step process tailored to enhance the accuracy and relevance of movie recommendations. This approach combines Chain-of-Thought Prompting, Zero-shot Prompting, and Directional Stimulus Prompting.
+In our project, we employed LLMs (GPT-3 and GPT-4) with prompt engineering, focusing on a structured, multi-step process tailored to enhance the accuracy and relevance of movie recommendations. This approach combines Chain-of-Thought Prompting, Zero-shot Prompting, and Directional Stimulus Prompting.
 
 #### Techniques and Approaches
+1. **Popularity-based** Recommender
 
-1. **Initial Prompt Engineering (temp_1 and temp_2 templates):**
-   - **Step 1**: The model is prompted to summarize the user's preferences based on the movies they have watched. This step aims to identify key features the user might value in movies, such as genres, themes, or actors. This aligns with aspects of **Chain-of-Thought Prompting**, guiding the model through a logical process of deriving user preferences.
-   - **Step 2**: The model is then requested to select movies from the user's watch history that align with these summarized preferences. This step focuses on pinpointing specific movies that reflect the user's tastes, utilizing a form of **Zero-shot Prompting** where the model uses its inherent knowledge to make selections.
+2. **Collaborative-filtering-based** Recommender
+    The project also explores a traditional User-Based Collaborative Filtering approach, including an enhanced version with weighted recommendations. This method relies on user-item interaction patterns to generate suggestions.
 
-2. **Enhanced Prompt Engineering (prompt_1 and prompt_2 templates):**
-   - **Step 1**: Here, the model is prompted to provide a more detailed analysis by summarizing the style and main actors of each watched movie. This step offers specific attributes for each movie, rather than a general summary of preferences, and is more aligned with **Directional Stimulus Prompting**, where the prompt directs the AI's focus to specific movie attributes.
-   - **Step 2**: Building on the detailed attributes from Step 1, the model is tasked with recommending movies from a candidate set that share similar styles and actors with the movies the user has watched. This approach is targeted, using distinct movie characteristics to guide the recommendations.
+3. **LLM-based** Recommender with **different number of steps**:
+    1. **2-step** Prompt Engineering (prompt_1 and prompt_2 templates):
+       - **Step 1**: Here, the model is prompted to provide a more detailed analysis by summarizing the style and main actors of each watched movie. This step offers specific attributes for each movie, rather than a general summary of preferences, and is more aligned with **Directional Stimulus Prompting**, where the prompt directs the AI's focus to specific movie attributes.
+       - **Step 2**: Building on the detailed attributes from Step 1, the model is tasked with recommending movies from a candidate set that share similar styles and actors with the movies the user has watched. This approach is targeted, using distinct movie characteristics to guide the recommendations.
+
+    2. **3-step** Prompt Engineering (temp_1, temp_2, and temp_3 templates):
+       - **Step 1**: The model is prompted to summarize the user's preferences based on the movies they have watched. This step aims to identify key features the user might value in movies, such as genres, themes, or actors. This aligns with aspects of **Chain-of-Thought Prompting**, guiding the model through a logical process of deriving user preferences.
+       - **Step 2**: The model is then requested to select movies from the user's watch history that align with these summarized preferences. This step focuses on pinpointing specific movies that reflect the user's tastes, utilizing a form of **Zero-shot Prompting** where the model uses its inherent knowledge to make selections.
+       - **Step 3**:
+
+3. **LLM-based** Recommender with **different prompt enigneering tricks**:
 
 #### Summary
 
 Our methodology in prompt engineering reflects a creative application of established techniques adapted to the specific requirements of our movie recommendation task. By guiding LLM through a structured, multi-step reasoning process and focusing on both general user preferences and specific movie attributes, we have developed a system that effectively leverages the AI's capabilities for personalized recommendations. This approach demonstrates the potential of combining different prompt engineering strategies to optimize the performance of language models in complex tasks such as movie recommendations.
 
 
-#### Collaborative Filtering
 
-The project also explores a traditional User-Based Collaborative Filtering approach, including an enhanced version with weighted recommendations. This method relies on user-item interaction patterns to generate suggestions.
 
 #### Evaluation
 
@@ -62,19 +71,19 @@ The project revealed that while traditional methods like User-Based Collaborativ
 
 ### Hit Rate Table
 
-| Model Type                                                 | Hit Rate            | Correct Predictions / Total Users |
+| Model Type                                                 | Hit Rate            | Correct Predictions <br> / Total Users |
 |------------------------------------------------------------|---------------------|-----------------------------------|
-| Most Popular Movie Recommender (Baseline)                  | 0.1118 (11.18%)     | 19 / 170                          |
-| User-Based Collaborative Filtering                         | 0.1588 (15.88%)     | 27 / 170                          |
-| User-Based Collaborative Filtering (Weighted Recommendations) | 0.3824 (38.24%)     | 65 / 170                          |
-| Prompt Engineering with GPT-3.5                            | 0.4765 (47.65%)     | 81 / 170                          |
-| Prompt Engineering with GPT-4                              | 0.5412 (54.12%)     | 92 / 170                          |
+| Popularity-based <br> Movie Recommender (Baseline)                  | 0.1118 (11.18%)     | 19 / 170  |
+| User-Based <br> Collaborative Filtering                         | 0.1588 (15.88%)     | 27 / 170   |
+| User-Based <br> Collaborative Filtering <br> (Weighted Recommendations) | 0.3824 (38.24%)     | 65 / 170 |
+| LLM-based <br> (GPT-3.5)                            | 0.4765 (47.65%)     | 81 / 170        |
+| LLM-based <br> (GPT-4)                              | 0.5412 (54.12%)     | 92 / 170       |
 
 ### Brief Summary of Findings:
 - **Most Popular Movie Recommender**: Served as a basic baseline with the lowest performance.
 - **User-Based Collaborative Filtering**: Showed improvement over the baseline.
 - **User-Based Collaborative Filtering (Weighted Recommendations)**: Significantly improved the hit rate, demonstrating the value of weighting similar users' preferences.
-- **Prompt Engineering with GPT-3.5 and GPT-4**: Advanced AI models performed the best, with GPT-4 leading in accuracy. This highlights the potential of leveraging AI for complex recommendation tasks.
+- **Prompt Engineering with GPT-3, GPT-3.5 and GPT-4**: Advanced AI models performed the best, with GPT-4 leading in accuracy. This highlights the potential of leveraging AI for complex recommendation tasks.
 
 The experiments involved testing various recommendation models:
 
@@ -111,6 +120,6 @@ The project underscores the potential of LLMs, particularly GPT-3.5 and GPT-4, i
 
 4.Different ideas for applying LLMs for product recommendations (without fine-tuning):
 * https://arxiv.org/pdf/2303.14524.pdf
-* https:/larxiv.org/pdf/2305.02182.pdf
+* https://arxiv.org/pdf/2305.02182.pdf
 * https://arxiv.org/pdf/2304.10149.pdf
 
