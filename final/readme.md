@@ -8,73 +8,66 @@
 
 ## Overview
 
-This project involves developing and evaluating a movie recommendation system powered by a Large Language Model (LLM). The system provides personalized movie suggestions to users by leveraging the language prediction capabilities of the LLM. 
-
-The core goal is assessing the LLM's effectiveness in generating accurate and relevant movie recommendations compared to a basic popularity-based recommendation baseline. 
+This project is a collaborative effort to develop and evaluate a sophisticated movie recommendation system leveraging the predictive capabilities of Large Language Models (LLMs). The primary objective is to assess the effectiveness of LLMs in generating personalized and relevant movie recommendations, compared to traditional and baseline recommendation models.
 
 ### System Description
 
-The system is composed of:
+The recommendation system consists of:
 
-- A LLM model (GPT-3.5) fine-tuned on movie recommendation data 
-- Prompt engineering framework to structure the recommendation queries for the LLM
-- Evaluation module to quantify performance using recommendation accuracy metrics
+- A LLM (GPT-3.5 and GPT-4) fine-tuned on movie recommendation data.
+- An innovative prompt engineering framework designed to effectively query the LLM.
+- A traditional User-Based Collaborative Filtering model, enhanced with weighted recommendations.
+- A basic popularity-based recommender as a baseline for comparison.
+- An evaluation module utilizing hit rate metrics to quantify the recommendation accuracy.
 
-It operates by taking in a user's movie watch history and employing prompt engineering to formulate a contextual recommendation query for the fine-tuned LLM. The model then suggests new movies that the user may enjoy.
+The system operates by analyzing a user's movie watching history, using prompt engineering to formulate contextual recommendation queries for the LLM, and then generating movie suggestions.
 
-## Methodology 
+### Methodology 
 
-### Prompt Engineering  
+#### Prompt Engineering
 
-The prompt engineering approach involves strategically designing prompts to provide relevant context and guide the LLM to produce useful recommendations.
+The prompt engineering approach involves crafting prompts that provide the LLM with relevant context about a user's interests, based on their watch history. This method was optimized by testing various prompt structures to enhance the accuracy of recommendations.
 
-- **Prompt Context**: Each prompt contains the user's list of previously watched movies as context about their interests.
-- **Recommendation Request**: The prompt asks the LLM to suggest new movies that the user may enjoy based on their watch history. 
-- **Optimization**: Multiple prompt structures were tested to maximize recommendation accuracy.
+#### Collaborative Filtering
 
-### Evaluation
+The project also explores a traditional User-Based Collaborative Filtering approach, including an enhanced version with weighted recommendations. This method relies on user-item interaction patterns to generate suggestions.
 
-A 'hit rate' metric quantifies the accuracy of the recommendations by calculating the percentage of correct recommendations out of the total suggestions.
+#### Evaluation
 
-- **Formula**: Hit rate = (# correct recommendations) / (total # of recommendations)
-- **Measurement**: The hit rate reflects how often the LLM-based system's recommendations matched what the user actually watched next.
-- **Goal**: Maximizing the hit rate to deliver the most accurate and usable recommendations.
+The evaluation focuses on the 'hit rate' metric, which measures the percentage of correct recommendations out of the total suggestions. This metric is critical for assessing how often each model's recommendations match the user's actual subsequent movie choice.
 
-## Experiments
+#### Experiments and Findings:
+The project revealed that while traditional methods like User-Based Collaborative Filtering show reasonable accuracy, enhanced methods like weighted recommendations significantly improve the hit rate. However, the most accurate predictions come from advanced AI models, with GPT-4 outperforming GPT-3.5.
 
-The system was evaluated using a dataset of ~5000 users with movie watch history data. The final hit rate achieved by the LLM-based approach was **47.65%**.
+### Hit Rate Table
 
-This significantly exceeds the baseline popularity-based model which attained only a **23.12%** hit rate.
+| Model Type                                                 | Hit Rate            | Correct Predictions / Total Users |
+|------------------------------------------------------------|---------------------|-----------------------------------|
+| Most Popular Movie Recommender (Baseline)                  | 0.1118 (11.18%)     | 19 / 170                          |
+| User-Based Collaborative Filtering                         | 0.1588 (15.88%)     | 27 / 170                          |
+| User-Based Collaborative Filtering (Weighted Recommendations) | 0.3824 (38.24%)     | 65 / 170                          |
+| Prompt Engineering with GPT-3.5                            | 0.4765 (47.65%)     | 81 / 170                          |
+| Prompt Engineering with GPT-4                              | 0.5412 (54.12%)     | 92 / 170                          |
 
-### Baseline Model
+### Brief Summary of Findings:
+- **Most Popular Movie Recommender**: Served as a basic baseline with the lowest performance.
+- **User-Based Collaborative Filtering**: Showed improvement over the baseline.
+- **User-Based Collaborative Filtering (Weighted Recommendations)**: Significantly improved the hit rate, demonstrating the value of weighting similar users' preferences.
+- **Prompt Engineering with GPT-3.5 and GPT-4**: Advanced AI models performed the best, with GPT-4 leading in accuracy. This highlights the potential of leveraging AI for complex recommendation tasks.
 
-The baseline recommends the globally most viewed movies, irrespective of the individual user's interests. The simplicity highlights the superior personalization of the LLM-based system.
+The experiments involved testing various recommendation models:
 
-## Code and Reproducibility
+- **Most Popular Movie Recommender (Baseline)**: Served as a basic comparison standard.
+- **User-Based Collaborative Filtering**: Provided reasonable accuracy improvements over the baseline.
+- **User-Based Collaborative Filtering (Weighted Recommendations)**: Demonstrated significant improvements in hit rate, validating the effectiveness of weighting similar users' preferences.
+- **Prompt Engineering with GPT-3.5 and GPT-4**: These advanced AI models showed superior performance in predicting user preferences, with GPT-4 outperforming GPT-3.5.
 
-The full code for implementing the movie recommendation system is available at:
-https://github.com/xxxxxxxx
+### Code and Reproducibility
 
-It includes:
 
-- Jupyter notebooks walking through data processing, model training, evaluation etc.
-- Documentation on the dataset, dependencies, and hardware requirements
-- Guidelines for reproducibility 
 
-Researchers can readily replicate or build upon this work thanks to the open-source codebase and methodological transparency.
+### Conclusion and Future Work
 
-# Writing the README content to a file
+The project underscores the potential of LLMs, particularly GPT-3.5 and GPT-4, in enhancing the accuracy and personalization of movie recommendations. The findings suggest that combining traditional collaborative methods with advanced AI models could lead to more precise recommendations. Future work could involve integrating additional contextual data, such as movie plots or user demographics, to further refine the recommendation accuracy. This project serves as a valuable proof-of-concept highlighting the applicability of LLMs in recommender systems.
+Absolutely! I'll provide a summary and a table of hit rates for the different recommendation models you've tested. This summary and table can be included in your README file for a clear overview of your project and findings.
 
-```
-readme_file_path = '/mnt/data/Movie_Recommendation_System_README.txt'
-with open(readme_file_path, 'w') as file:
-    file.write(readme_content)
-
-readme_file_path
-```
-
-## Conclusion
-
-Through rigorous evaluation, this project demonstrates the promising potential of large language models for personalized and accurate movie recommendations. Prompt engineering proves to be an effective approach for extracting useful suggestions from the LLM. 
-
-There remains much room for improvement in hit rate performance - future work includes incorporating additional context like movie plots or user demographics. Overall, this serves as a valuable proof-of-concept highlighting LLMs' applicability in recommender systems.
