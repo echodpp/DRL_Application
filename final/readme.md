@@ -17,6 +17,7 @@
 
 <img width="727" alt="Screen Shot 2023-12-14 at 2 49 12 PM" src="https://github.com/echodpp/DRL_Application/assets/112274822/ae6b3417-bdd7-430a-b56c-45014c166e23">
 
+
 This project is a collaborative effort to develop and evaluate a sophisticated movie recommendation system leveraging the predictive capabilities of Large Language Models (LLMs). The primary objective is to:
 1. assess the effectiveness of LLM-based approaches in generating personalized and relevant movie recommendations 
 2. compare LLM approaches with traditional and baseline recommendation models.
