@@ -63,6 +63,13 @@ In our project, we employed LLMs (GPT-3 and GPT-4) with prompt engineering, focu
 
 The evaluation focuses on the 'hit rate' metric, which measures the percentage of correct recommendations out of the total suggestions. This metric is critical for assessing how often each model's recommendations match the user's actual subsequent movie choice.
 
+##### Evaluation Metric: Hit Rate
+In this project we evaluate the recommendation performance using the metric hit rate @ k (HR@k).
+A hit in HR@k means the ground truth selection of the user appears in the $k$ recommendations given by the model in each recommendation round.
+HR@k then calculates the average percentage of hit in all rounds.
+In this work, we use HR@10, which evluate the average percentage of hit when the model provides 10 potential movies for recommendation.
+
+
 
 ##### Table1. Recommendation Performace (Hit Rate@10) Comparison <br> - Tradictional methods V.S. LLM-based methods
 
@@ -125,7 +132,9 @@ Our methodology in prompt engineering reflects a creative application of establi
 
 ### Conclusion and Future Work
 
-The project underscores the potential of LLMs, particularly GPT-3.5 and GPT-4, in enhancing the accuracy and personalization of movie recommendations. The findings suggest that combining traditional collaborative methods with advanced AI models could lead to more precise recommendations. Future work could involve integrating additional contextual data, such as movie plots or user demographics, to refine the recommendation accuracy further. This project serves as a valuable proof-of-concept highlighting the applicability of LLMs in recommender systems.
+The project underscores the potential of LLMs, particularly GPT-3, GPT-3.5 and GPT-4, in enhancing the accuracy and personalization of movie recommendations. The findings suggest that combining traditional collaborative methods with advanced AI models could lead to more precise recommendations.
+
+Future work could involve integrating additional contextual data as side information, such as movie plots, user demographics, and user ratings, to refine the recommendation accuracy further. This project serves as a valuable proof-of-concept highlighting the applicability of LLMs in recommender systems.
 
 ### Code and Reproducibility
 The implementation of our movie recommendation system is organized across several Jupyter notebooks hosted on Google Colab for ease of access and execution. Below is an overview of these notebooks and instructions for their use:
