@@ -1,10 +1,19 @@
 
 # AIPI531 Final Project: Evaluation of a Movie Recommendation System
 
-## Team Members
-- Echo Chen
-- Tianyi Hu
-- Jiaxin Ying
+## Team Members’ Contribution 
+
+### Echo Chen
+* User-Based Collaborative Filtering Model: Generates recommendations based on similarity between users and their movie rating patterns.
+* Weighted User-Based Collaborative Filtering Model: An enhancement of the above model that applies weights to different users based on their degree of similarity.
+* Most Popular Movie Recommender Baseline Model: A non-personalized baseline model that simply suggests the globally most viewed movies.
+
+### Jiaxin Ying
+* Prompt Engineering with GPT-3.5 Model: Employs optimized prompt design to query the GPT-3.5 language model to produce movie recommendations personalized to the user context.
+* Zero-Shot Prompting Model: Leverages GPT-3.5's zero-shot generalization capability to generate recommendations without additional fine-tuning on movie data.
+
+### Tianyi Hu
+* Few-Shot Prompting Model: Fine-tunes GPT-3.5 on a small set of movie recommendation examples to tailor its prediction capabilities, prior to prompt-based querying.
 
 ## Overview
 
