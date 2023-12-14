@@ -1,7 +1,7 @@
 
 # AIPI531 Final Project: Evaluation of a Movie Recommendation System
 
-## Team Members’ Contribution 
+## 💡 Team Members’ Contribution 
 
 #### Echo Chen
 * Most Popular and User-Based Collaborative Filtering baseline Model
@@ -13,7 +13,7 @@
 #### Tianyi Hu
 * Evaluate different Prompt Engineering techniques, test GPT-4 Model
 
-## Overview
+## 🎬 Overview
 
 This project is a collaborative effort to develop and evaluate a sophisticated movie recommendation system leveraging the predictive capabilities of Large Language Models (LLMs). The primary objective is to:
 1. assess the effectiveness of LLM-based approaches in generating personalized and relevant movie recommendations 
@@ -21,7 +21,7 @@ This project is a collaborative effort to develop and evaluate a sophisticated m
 3. compare LLM approaches with different models.
 3. evaluate the performace of LLMs with different prompt engineering techniques.
 
-### System Description
+### 🖥️ System Description
 
 The recommendation system project consists of:
 
@@ -33,11 +33,11 @@ The recommendation system project consists of:
 
 The system operates by analyzing a user's movie-watching history, using prompt engineering to formulate contextual recommendation queries for the LLM, and then generating movie suggestions.
 
-### Methodology
+### 📑 Methodology
 
 In our project, we employed LLMs (GPT-3 and GPT-4) with prompt engineering, focusing on a structured, multi-step process tailored to enhance the accuracy and relevance of movie recommendations. This approach combines Chain-of-Thought Prompting, Zero-shot Prompting, and Directional Stimulus Prompting.
 
-#### Techniques and Approaches
+#### 🛠️ Techniques and Approaches
 1. **Popularity-based** Recommender
 
 2. **Collaborative-filtering-based** Recommender
@@ -56,19 +56,15 @@ In our project, we employed LLMs (GPT-3 and GPT-4) with prompt engineering, focu
 3. **LLM-based** Recommender with **different prompt enigneering tricks**:
 	We implement and evaluate the performance of the 2-step-prompt-based approaches but with different popular prompt engineering tricks, such as adding "You are an expert in movie recommendation" and "Let's think step by step".  	
 
-
-
-### Evaluation
+### 📝 Evaluation
 
 The evaluation focuses on the 'hit rate' metric, which measures the percentage of correct recommendations out of the total suggestions. This metric is critical for assessing how often each model's recommendations match the user's actual subsequent movie choice.
 
-##### Evaluation Metric: Hit Rate
+#####  🎯 Evaluation Metric: Hit Rate
 In this project we evaluate the recommendation performance using the metric hit rate @ k (HR@k).
 A hit in HR@k means the ground truth selection of the user appears in the $k$ recommendations given by the model in each recommendation round.
 HR@k then calculates the average percentage of hit in all rounds.
 In this work, we use HR@10, which evluate the average percentage of hit when the model provides 10 potential movies for recommendation.
-
-
 
 ##### Table1. Recommendation Performace (Hit Rate@10) Comparison <br> - Tradictional methods V.S. LLM-based methods
 
@@ -96,7 +92,6 @@ In this work, we use HR@10, which evluate the average percentage of hit when the
 | 3step-based <br> (GPT-3: text-davinci-003)                            | 0.6294 (62.94%)     | 107 / 170        |
 
 
-
 ##### Table4. Recommendation Performace (Hit Rate@10) Comparison <br> - LLM-based methods with different promt tricks
 
 | Model Type                                                 | Hit Rate            | Correct Predictions <br> / Total Users |
@@ -104,7 +99,7 @@ In this work, we use HR@10, which evluate the average percentage of hit when the
 | **Without prompt tricks** <br> ("Think step by step" <br> "You are an expert in <br> movie recommendation") <br> (GPT-3: text-davinci-003)                              | 0.5941 (59.41%)     | 101 / 170       |
 | **With prompt tricks** <br> ("Think step by step" <br> "You are an expert in <br> movie recommendation") <br> (GPT-3: text-davinci-003)                            | 0.5647 (56.47%)     | 96 / 170        |
 
-### Brief Summary of Observations:
+### 📚 Brief Observations:
 
 - Table1 shows the performance comparisons between the tradictional approaches and LLM-based methods.
     - **Most Popular Movie Recommender**: Serves as a basic baseline with the lowest performance.
@@ -125,18 +120,18 @@ In this work, we use HR@10, which evluate the average percentage of hit when the
 	- To our surprises, adding some popular tricks, such as "You are an expert in movie recommendation" and "Let's think step by step", does not yield a better performance. Without the tricks we achieve HR@10 of 59.41% while adding the tricks the HR@10 drops to 56.47%.
 	- It might be because the LLM find it hard to understand what is an expert in movie recommendation as there is not much description of "movie recommendation expert" in literatures while there is much more description of other roles like "teacher", "judge" in its training set.
 
-### Summary
+### 🌟 Summary
 
 Our methodology in prompt engineering reflects a creative application of established techniques adapted to the specific requirements of our movie recommendation task. By guiding LLM through a structured, multi-step reasoning process and focusing on both general user preferences and specific movie attributes, we have developed a system that effectively leverages the AI's capabilities for personalized recommendations. This approach demonstrates the potential of combining different prompt engineering strategies to optimize the performance of language models in complex tasks such as movie recommendations.
 
-## Conclusion and Future Work
+## 📊 Conclusion and Future Work
 
 The project underscores the potential of LLMs, particularly GPT-3, GPT-3.5 and GPT-4, in enhancing the accuracy and personalization of movie recommendations. The findings suggest that combining traditional collaborative methods with advanced AI models could lead to more precise recommendations.
 
 Future work could involve integrating additional contextual data as side information, such as movie plots, user demographics, and user ratings, to refine the recommendation accuracy further as current approaches only use the watched movie history as input.
 This project serves as a valuable proof-of-concept highlighting the applicability of LLMs in recommender systems.
 
-## Code and Reproducibility
+## 🚀 Code and Reproducibility
 The implementation of our movie recommendation system is organized across several Jupyter notebooks hosted on Google Colab for ease of access and execution. Below is an overview of these notebooks and instructions for their use:
 
 1. **Baseline Models (`baseline.ipynb`):**
@@ -158,7 +153,7 @@ The implementation of our movie recommendation system is organized across severa
    - A single notebook is provided for the 2-step prompt  recommendation systems **with different prompt engineering tricks**.
    - **Data and API Key Requirement**: Make sure to have the `movieslen_100k` dataset correctly placed in the defined directory. Additionally, an OpenAI API key is necessary to connect to the respective LLMs (GPT-3.5 and GPT-4). Insert your API key in the designated section of the notebooks.
 
-### References and Tools
+### 🔍 References and Tools
 
 1.0penAl LLMs: https://openai.com/chatopt
 
