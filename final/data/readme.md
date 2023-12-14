@@ -21,7 +21,7 @@ for i, user_list in enumerate(selected_user_lists, start=1):
     print("Next Watched Movie:", user_list[1])
     print("\n")
 ```
-
+Output :
 ```
 Example 1:
 Watched Movies: The Thin Man | Ran | Dumbo | James and the Giant Peach | 2001: A Space Odyssey | Belle de jour | Terminator 2: Judgment Day | French Twist (Gazon maudit) | Three Colors: Red | Casino | The Hunchback of Notre Dame | The Specialist | Home Alone | Bedknobs and Broomsticks | Pink Floyd - The Wall | Beauty and the Beast | The Love Bug | Mr. Holland's Opus | Star Trek: The Wrath of Khan | Picture Bride | Annie Hall | Toy Story | Gone with the Wind | Fargo | Like Water For Chocolate (Como agua para chocolate) | The Preacher's Wife | 101 Dalmatians | Willy Wonka and the Chocolate Factory | Swingers | Looking for Richard | Surviving Picasso | Twelfth Night | Bound | The Island of Dr. Moreau | Emma | Ransom | The Adventures of Pinocchio | Lone Star | Wild Things | The Postman | Titanic | The Apostle | Eve's Bayou | The Devil's Advocate | Fly Away Home | I Know What You Did Last Summer | Chasing Amy | Ulee's Gold | Kiss Me, Guido | George of the Jungle
