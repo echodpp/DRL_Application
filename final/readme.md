@@ -69,5 +69,4 @@ The experiments involved testing various recommendation models:
 ### Conclusion and Future Work
 
 The project underscores the potential of LLMs, particularly GPT-3.5 and GPT-4, in enhancing the accuracy and personalization of movie recommendations. The findings suggest that combining traditional collaborative methods with advanced AI models could lead to more precise recommendations. Future work could involve integrating additional contextual data, such as movie plots or user demographics, to further refine the recommendation accuracy. This project serves as a valuable proof-of-concept highlighting the applicability of LLMs in recommender systems.
-Absolutely! I'll provide a summary and a table of hit rates for the different recommendation models you've tested. This summary and table can be included in your README file for a clear overview of your project and findings.
 
