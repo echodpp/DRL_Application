@@ -75,7 +75,25 @@ The experiments involved testing various recommendation models:
 
 
 
+
 ### Conclusion and Future Work
 
 The project underscores the potential of LLMs, particularly GPT-3.5 and GPT-4, in enhancing the accuracy and personalization of movie recommendations. The findings suggest that combining traditional collaborative methods with advanced AI models could lead to more precise recommendations. Future work could involve integrating additional contextual data, such as movie plots or user demographics, to further refine the recommendation accuracy. This project serves as a valuable proof-of-concept highlighting the applicability of LLMs in recommender systems.
+
+### References and Tools
+
+1.Hugging Face open source LLMs: https://huggingface.co/blog/llama2
+
+2.0penAl LLMs: https://openai.com/chatopt
+
+3.Prompt Engineering: https://www.promptingquide.ai
+
+4.RAG: https://arxiv.org/pdf/2005.11401.pdf
+
+5.Langchain: https://python.langchain.com/docs/get started/introduction
+
+6.Different ideas for applying LLMs for product recommendations (without fine-tuning):
+* https://arxiv.org/pdf/2303.14524.pdf
+* https:/larxiv.org/pdf/2305.02182.pdf
+* https://arxiv.org/pdf/2304.10149.pdf
 
