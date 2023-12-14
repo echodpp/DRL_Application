@@ -133,7 +133,8 @@ Our methodology in prompt engineering reflects a creative application of establi
 
 The project underscores the potential of LLMs, particularly GPT-3, GPT-3.5 and GPT-4, in enhancing the accuracy and personalization of movie recommendations. The findings suggest that combining traditional collaborative methods with advanced AI models could lead to more precise recommendations.
 
-Future work could involve integrating additional contextual data as side information, such as movie plots, user demographics, and user ratings, to refine the recommendation accuracy further. This project serves as a valuable proof-of-concept highlighting the applicability of LLMs in recommender systems.
+Future work could involve integrating additional contextual data as side information, such as movie plots, user demographics, and user ratings, to refine the recommendation accuracy further as current approaches only use the watched movie history as input.
+This project serves as a valuable proof-of-concept highlighting the applicability of LLMs in recommender systems.
 
 ## Code and Reproducibility
 The implementation of our movie recommendation system is organized across several Jupyter notebooks hosted on Google Colab for ease of access and execution. Below is an overview of these notebooks and instructions for their use:
