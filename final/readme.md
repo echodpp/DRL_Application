@@ -4,20 +4,18 @@
 ## Team Members’ Contribution 
 
 ### Echo Chen
-* User-Based Collaborative Filtering Model: Generates recommendations based on similarity between users and their movie rating patterns.
-* Weighted User-Based Collaborative Filtering Model: An enhancement of the above model that applies weights to different users based on their degree of similarity.
-* Most Popular Movie Recommender Baseline Model: A non-personalized baseline model that simply suggests the globally most viewed movies.
+* Most Popular Movie Recommender Baseline Model and User-Based Collaborative Filtering Model
+* Initial Prompt Engineering, try few-shot Prompt Engineering
 
 ### Jiaxin Ying
-* Prompt Engineering with GPT-3.5 Model: Employs optimized prompt design to query the GPT-3.5 language model to produce movie recommendations personalized to the user context.
-* Zero-Shot Prompting Model: Leverages GPT-3.5's zero-shot generalization capability to generate recommendations without additional fine-tuning on movie data.
+* Whole Prompt Engineering process with GPT-3.5 Model
 
 ### Tianyi Hu
-* Few-Shot Prompting Model: Fine-tunes GPT-3.5 on a small set of movie recommendation examples to tailor its prediction capabilities, prior to prompt-based querying.
+* Enhanced Prompt Engineering, test GPT-4 Model
 
 ## Overview
 
-This project is a collaborative effort to develop and evaluate a sophisticated movie recommendation system leveraging the predictive capabilities of Large Language Models (LLMs). The primary objective is to assess the effectiveness of LLMs in generating personalized and relevant movie recommendations, compared to traditional and baseline recommendation models.
+This project is a collaborative effort to develop and evaluate a sophisticated movie recommendation system leveraging the predictive capabilities of Large Language Models (LLMs). The primary objective is to assess the effectiveness of LLMs in generating personalized and relevant movie recommendations compared to traditional and baseline recommendation models.
 
 ### System Description
 
@@ -29,13 +27,27 @@ The recommendation system consists of:
 - A basic popularity-based recommender as a baseline for comparison.
 - An evaluation module utilizing hit rate metrics to quantify the recommendation accuracy.
 
-The system operates by analyzing a user's movie watching history, using prompt engineering to formulate contextual recommendation queries for the LLM, and then generating movie suggestions.
+The system operates by analyzing a user's movie-watching history, using prompt engineering to formulate contextual recommendation queries for the LLM, and then generating movie suggestions.
 
 ### Methodology 
 
-#### Prompt Engineering
 
-The prompt engineering approach involves crafting prompts that provide the LLM with relevant context about a user's interests, based on their watch history. This method was optimized by testing various prompt structures to enhance the accuracy of recommendations.
+In our project, we employed a novel approach to prompt engineering with GPT-3.5 and GPT-4, focusing on a structured, multi-step process tailored to enhance the accuracy and relevance of movie recommendations. This approach combines Chain-of-Thought Prompting, Zero-shot Prompting, and Directional Stimulus Prompting.
+
+#### Techniques and Approaches
+
+1. **Initial Prompt Engineering (temp_1 and temp_2 templates):**
+   - **Step 1**: The model is prompted to summarize the user's preferences based on the movies they have watched. This step aims to identify key features the user might value in movies, such as genres, themes, or actors. This aligns with aspects of **Chain-of-Thought Prompting**, guiding the model through a logical process of deriving user preferences.
+   - **Step 2**: The model is then requested to select movies from the user's watch history that align with these summarized preferences. This step focuses on pinpointing specific movies that reflect the user's tastes, utilizing a form of **Zero-shot Prompting** where the model uses its inherent knowledge to make selections.
+
+2. **Enhanced Prompt Engineering (prompt_1 and prompt_2 templates):**
+   - **Step 1**: Here, the model is prompted to provide a more detailed analysis by summarizing the style and main actors of each watched movie. This step offers specific attributes for each movie, rather than a general summary of preferences, and is more aligned with **Directional Stimulus Prompting**, where the prompt directs the AI's focus to specific movie attributes.
+   - **Step 2**: Building on the detailed attributes from Step 1, the model is tasked with recommending movies from a candidate set that share similar styles and actors with the movies the user has watched. This approach is targeted, using distinct movie characteristics to guide the recommendations.
+
+#### Summary
+
+Our methodology in prompt engineering reflects a creative application of established techniques adapted to the specific requirements of our movie recommendation task. By guiding LLM through a structured, multi-step reasoning process and focusing on both general user preferences and specific movie attributes, we have developed a system that effectively leverages the AI's capabilities for personalized recommendations. This approach demonstrates the potential of combining different prompt engineering strategies to optimize the performance of language models in complex tasks such as movie recommendations.
+
 
 #### Collaborative Filtering
 
@@ -72,27 +84,32 @@ The experiments involved testing various recommendation models:
 - **Prompt Engineering with GPT-3.5 and GPT-4**: These advanced AI models showed superior performance in predicting user preferences, with GPT-4 outperforming GPT-3.5.
 
 ### Code and Reproducibility
+The implementation of our movie recommendation system is organized across several Jupyter notebooks hosted on Google Colab for ease of access and execution. Below is an overview of these notebooks and instructions for their use:
 
+1. **Baseline Models (`baseline.ipynb`):**
+   - This notebook contains the implementation of three baseline recommender systems:
+     - Most Popular Movie Recommender
+     - User-Based Collaborative Filtering
+     - User-Based Collaborative Filtering with Weighted Recommendations
+   - **Data Requirement**: Make sure to have the `movieslen_100k` dataset correctly placed in the defined directory. you can also find it in our repo under `data/` directory. 
 
-
+2. **GPT-3.5 and GPT-4 Models (`gpt3.ipynb` and `gpt4.ipynb`):**
+   - Separate notebooks are provided for the GPT-3.5 and GPT-4-based recommendation systems.
+   - **Data and API Key Requirement**: Make sure to have the `movieslen_100k` dataset correctly placed in the defined directory. Additionally, an OpenAI API key is necessary to connect to the respective LLMs (GPT-3.5 and GPT-4). Insert your API key in the designated section of the notebooks.
 
 ### Conclusion and Future Work
 
-The project underscores the potential of LLMs, particularly GPT-3.5 and GPT-4, in enhancing the accuracy and personalization of movie recommendations. The findings suggest that combining traditional collaborative methods with advanced AI models could lead to more precise recommendations. Future work could involve integrating additional contextual data, such as movie plots or user demographics, to further refine the recommendation accuracy. This project serves as a valuable proof-of-concept highlighting the applicability of LLMs in recommender systems.
+The project underscores the potential of LLMs, particularly GPT-3.5 and GPT-4, in enhancing the accuracy and personalization of movie recommendations. The findings suggest that combining traditional collaborative methods with advanced AI models could lead to more precise recommendations. Future work could involve integrating additional contextual data, such as movie plots or user demographics, to refine the recommendation accuracy further. This project serves as a valuable proof-of-concept highlighting the applicability of LLMs in recommender systems.
 
 ### References and Tools
 
-1.Hugging Face open source LLMs: https://huggingface.co/blog/llama2
+1.0penAl LLMs: https://openai.com/chatopt
 
-2.0penAl LLMs: https://openai.com/chatopt
+2.Prompt Engineering: https://www.promptingquide.ai
 
-3.Prompt Engineering: https://www.promptingquide.ai
+3.Langchain: https://python.langchain.com/docs/get_started/introduction
 
-4.RAG: https://arxiv.org/pdf/2005.11401.pdf
-
-5.Langchain: https://python.langchain.com/docs/get_started/introduction
-
-6.Different ideas for applying LLMs for product recommendations (without fine-tuning):
+4.Different ideas for applying LLMs for product recommendations (without fine-tuning):
 * https://arxiv.org/pdf/2303.14524.pdf
 * https:/larxiv.org/pdf/2305.02182.pdf
 * https://arxiv.org/pdf/2304.10149.pdf
